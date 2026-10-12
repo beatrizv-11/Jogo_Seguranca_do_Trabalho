@@ -1,0 +1,819 @@
+{
+  "jogo": "Operação Área Segura",
+  "fase": 1,
+  "nivel": "Médio",
+  "como_usar": "Cada risco tem 3 perguntas em sequência (risco, NR, medida), 4 alternativas cada, 3 dicas de localização e um texto de explicação.",
+  "nrs": {
+    "NR-06": {
+      "nome": "NR-06 · Equipamento de Proteção Individual (EPI)"
+    },
+    "NR-10": {
+      "nome": "NR-10 · Segurança em instalações e serviços em eletricidade"
+    },
+    "NR-12": {
+      "nome": "NR-12 · Segurança no trabalho em máquinas e equipamentos"
+    },
+    "NR-23": {
+      "nome": "NR-23 · Proteção contra incêndios"
+    },
+    "NR-26": {
+      "nome": "NR-26 · Sinalização de segurança"
+    },
+    "NR-35": {
+      "nome": "NR-35 · Trabalho em altura"
+    }
+  },
+  "riscos": [
+    {
+      "id": 1,
+      "objeto_no_cenario": "funcionario_sem_capacete + capacete_chao",
+      "nome_na_ficha": "Funcionário sem capacete",
+      "nr": "NR-06",
+      "dicas": [
+        {
+          "nivel": 1,
+          "texto": "Olhem para a área da esquerda, perto do funcionário e da máquina."
+        },
+        {
+          "nivel": 2,
+          "texto": "Procurem algo que deveria estar protegendo uma pessoa, mas está no lugar errado."
+        },
+        {
+          "nivel": 3,
+          "texto": "Pensem na norma dos equipamentos de proteção individual."
+        }
+      ],
+      "perguntas": [
+        {
+          "etapa": "risco",
+          "enunciado": "Qual é o risco neste ponto?",
+          "alternativas": [
+            {
+              "texto": "Choque elétrico por fio descascado",
+              "correta": false,
+              "retorno": "Não há fio exposto perto dele. Reparem no que ele não está usando.",
+              "id": "A"
+            },
+            {
+              "texto": "Escorregão por piso molhado",
+              "correta": false,
+              "retorno": "O piso perto dele está seco. Reparem no que está no chão e no que falta na cabeça dele.",
+              "id": "B"
+            },
+            {
+              "texto": "Trabalho sem proteção da cabeça: risco de ferimento por impacto ou queda de objetos",
+              "correta": true,
+              "retorno": "Isso mesmo.",
+              "id": "C"
+            },
+            {
+              "texto": "Ruído excessivo da máquina",
+              "correta": false,
+              "retorno": "Não há sinal de ruído no cenário. O problema é a falta de um equipamento de proteção.",
+              "id": "D"
+            }
+          ]
+        },
+        {
+          "etapa": "nr",
+          "enunciado": "Qual norma regulamentadora trata desse risco?",
+          "alternativas": [
+            {
+              "texto": "NR-06 · Equipamento de Proteção Individual (EPI)",
+              "correta": true,
+              "retorno": "Isso mesmo. Pela NR-06, a empresa deve fornecer o EPI adequado ao risco e o trabalhador deve usá-lo. O capacete protege a cabeça contra impacto e queda de objetos.",
+              "id": "A"
+            },
+            {
+              "texto": "NR-35 · Trabalho em altura",
+              "correta": false,
+              "retorno": "Não é essa. A NR-35 trata de trabalho em altura: atividades acima de 2 m do nível inferior com risco de queda.",
+              "id": "B"
+            },
+            {
+              "texto": "NR-26 · Sinalização de segurança",
+              "correta": false,
+              "retorno": "Não é essa. A NR-26 trata de sinalização e identificação de segurança dos locais de trabalho, com cores e sinais de advertência.",
+              "id": "C"
+            },
+            {
+              "texto": "NR-23 · Proteção contra incêndios",
+              "correta": false,
+              "retorno": "Não é essa. A NR-23 trata de proteção contra incêndios, incluindo saídas de emergência e combate ao fogo.",
+              "id": "D"
+            }
+          ]
+        },
+        {
+          "etapa": "medida",
+          "enunciado": "Qual medida preventiva resolve o problema?",
+          "alternativas": [
+            {
+              "texto": "Pendurar um cartaz pedindo atenção, sem exigir o uso",
+              "correta": false,
+              "retorno": "Aviso sozinho não protege: é preciso fornecer e exigir o EPI.",
+              "id": "A"
+            },
+            {
+              "texto": "Deixar o capacete por perto e usar só se o funcionário quiser",
+              "correta": false,
+              "retorno": "O uso do EPI não é opcional quando o risco existe.",
+              "id": "B"
+            },
+            {
+              "texto": "Pedir que ele trabalhe mais rápido para ficar menos tempo exposto",
+              "correta": false,
+              "retorno": "Pressa não elimina o risco e ainda aumenta a chance de acidente.",
+              "id": "C"
+            },
+            {
+              "texto": "Fornecer o capacete, treinar a equipe e fiscalizar o uso durante todo o trabalho",
+              "correta": true,
+              "retorno": "Isso mesmo.",
+              "id": "D"
+            }
+          ]
+        }
+      ],
+      "explicacao_final": "Pela NR-06, a empresa deve fornecer o EPI adequado ao risco e o trabalhador deve usá-lo. O capacete protege a cabeça contra impacto e queda de objetos."
+    },
+    {
+      "id": 2,
+      "objeto_no_cenario": "maquina",
+      "nome_na_ficha": "Engrenagem exposta",
+      "nr": "NR-12",
+      "dicas": [
+        {
+          "nivel": 1,
+          "texto": "Olhem para o equipamento grande de metal, à esquerda do cenário."
+        },
+        {
+          "nivel": 2,
+          "texto": "Reparem no visor verde da máquina e no que está aberto nela: há algo girando ao alcance das mãos."
+        },
+        {
+          "nivel": 3,
+          "texto": "Pensem na norma de segurança em máquinas e equipamentos."
+        }
+      ],
+      "perguntas": [
+        {
+          "etapa": "risco",
+          "enunciado": "Qual é o risco neste ponto?",
+          "alternativas": [
+            {
+              "texto": "Incêndio por superaquecimento do painel",
+              "correta": false,
+              "retorno": "O painel mostra funcionamento normal. O perigo está nas peças girando abertas.",
+              "id": "A"
+            },
+            {
+              "texto": "Contato com partes móveis expostas: risco de prensamento, arrastamento e amputação",
+              "correta": true,
+              "retorno": "Isso mesmo.",
+              "id": "B"
+            },
+            {
+              "texto": "Queda de objetos de uma prateleira alta",
+              "correta": false,
+              "retorno": "Não há nada caindo. O perigo está dentro da máquina.",
+              "id": "C"
+            },
+            {
+              "texto": "Exposição a produto químico",
+              "correta": false,
+              "retorno": "Não há sinal de produto químico no cenário.",
+              "id": "D"
+            }
+          ]
+        },
+        {
+          "etapa": "nr",
+          "enunciado": "Qual norma regulamentadora trata desse risco?",
+          "alternativas": [
+            {
+              "texto": "NR-06 · Equipamento de Proteção Individual (EPI)",
+              "correta": false,
+              "retorno": "Não é essa. A NR-06 trata de fornecimento, uso e conservação dos equipamentos de proteção individual (EPI).",
+              "id": "A"
+            },
+            {
+              "texto": "NR-10 · Segurança em instalações e serviços em eletricidade",
+              "correta": false,
+              "retorno": "Não é essa. A NR-10 trata de segurança em instalações e serviços com eletricidade.",
+              "id": "B"
+            },
+            {
+              "texto": "NR-26 · Sinalização de segurança",
+              "correta": false,
+              "retorno": "Não é essa. A NR-26 trata de sinalização e identificação de segurança dos locais de trabalho, com cores e sinais de advertência.",
+              "id": "C"
+            },
+            {
+              "texto": "NR-12 · Segurança no trabalho em máquinas e equipamentos",
+              "correta": true,
+              "retorno": "Isso mesmo. A NR-12 exige proteções fixas ou móveis com intertravamento nas partes móveis de máquinas e proíbe operar com essas proteções removidas.",
+              "id": "D"
+            }
+          ]
+        },
+        {
+          "etapa": "medida",
+          "enunciado": "Qual medida preventiva resolve o problema?",
+          "alternativas": [
+            {
+              "texto": "Fechar a máquina com proteção fixa ou porta intertravada, que a faz parar se for aberta",
+              "correta": true,
+              "retorno": "Isso mesmo.",
+              "id": "A"
+            },
+            {
+              "texto": "Colocar uma fita amarela ao redor e continuar operando",
+              "correta": false,
+              "retorno": "A fita sinaliza, mas não impede o contato com as engrenagens.",
+              "id": "B"
+            },
+            {
+              "texto": "Orientar os operadores a tomar cuidado com as mãos",
+              "correta": false,
+              "retorno": "Só orientação não basta: a proteção física é a primeira medida.",
+              "id": "C"
+            },
+            {
+              "texto": "Usar luvas largas e grossas para mexer na máquina ligada",
+              "correta": false,
+              "retorno": "Luvas largas podem ser puxadas pelas engrenagens e piorar o acidente.",
+              "id": "D"
+            }
+          ]
+        }
+      ],
+      "explicacao_final": "A NR-12 exige proteções fixas ou móveis com intertravamento nas partes móveis de máquinas e proíbe operar com essas proteções removidas."
+    },
+    {
+      "id": 3,
+      "objeto_no_cenario": "poca (+ placa_piso_molhado, se mantida)",
+      "nome_na_ficha": "Piso molhado sem sinalização",
+      "nr": "NR-26",
+      "dicas": [
+        {
+          "nivel": 1,
+          "texto": "Olhem para o chão, do lado direito do cenário."
+        },
+        {
+          "nivel": 2,
+          "texto": "Procurem uma mancha escura no piso, por onde alguém pode passar."
+        },
+        {
+          "nivel": 3,
+          "texto": "Pensem na norma de sinalização de segurança, de cores e placas."
+        }
+      ],
+      "perguntas": [
+        {
+          "etapa": "risco",
+          "enunciado": "Qual é o risco neste ponto?",
+          "alternativas": [
+            {
+              "texto": "Queda por escorregão em piso molhado ou com óleo, sem aviso para quem passa",
+              "correta": true,
+              "retorno": "Isso mesmo.",
+              "id": "A"
+            },
+            {
+              "texto": "Choque elétrico pela água no chão",
+              "correta": false,
+              "retorno": "Não há equipamento elétrico encostando na poça.",
+              "id": "B"
+            },
+            {
+              "texto": "Queda de altura de uma escada",
+              "correta": false,
+              "retorno": "Aqui a queda acontece no mesmo nível do piso, por escorregão.",
+              "id": "C"
+            },
+            {
+              "texto": "Contaminação do ar por vapores",
+              "correta": false,
+              "retorno": "A poça é risco de queda, não de inalação.",
+              "id": "D"
+            }
+          ]
+        },
+        {
+          "etapa": "nr",
+          "enunciado": "Qual norma regulamentadora trata desse risco?",
+          "alternativas": [
+            {
+              "texto": "NR-35 · Trabalho em altura",
+              "correta": false,
+              "retorno": "Não é essa. A NR-35 trata de trabalho em altura: atividades acima de 2 m do nível inferior com risco de queda.",
+              "id": "A"
+            },
+            {
+              "texto": "NR-12 · Segurança no trabalho em máquinas e equipamentos",
+              "correta": false,
+              "retorno": "Não é essa. A NR-12 trata de segurança no trabalho com máquinas e equipamentos.",
+              "id": "B"
+            },
+            {
+              "texto": "NR-26 · Sinalização de segurança",
+              "correta": true,
+              "retorno": "Isso mesmo. A NR-26 trata da sinalização e identificação de segurança: cores e sinais indicam e advertem sobre os riscos do local, como a placa de piso molhado.",
+              "id": "C"
+            },
+            {
+              "texto": "NR-23 · Proteção contra incêndios",
+              "correta": false,
+              "retorno": "Não é essa. A NR-23 trata de proteção contra incêndios, incluindo saídas de emergência e combate ao fogo.",
+              "id": "D"
+            }
+          ]
+        },
+        {
+          "etapa": "medida",
+          "enunciado": "Qual medida preventiva resolve o problema?",
+          "alternativas": [
+            {
+              "texto": "Cobrir a poça com papelão e deixar o trabalho seguir",
+              "correta": false,
+              "retorno": "Papelão escorrega, esconde o risco e não elimina a causa.",
+              "id": "A"
+            },
+            {
+              "texto": "Sinalizar e isolar a área, limpar o derrame e descobrir a origem do vazamento",
+              "correta": true,
+              "retorno": "Isso mesmo.",
+              "id": "B"
+            },
+            {
+              "texto": "Avisar só os colegas que estão por perto",
+              "correta": false,
+              "retorno": "Quem chegar depois não saberá do risco: o aviso precisa estar no local.",
+              "id": "C"
+            },
+            {
+              "texto": "Esperar a poça secar sozinha",
+              "correta": false,
+              "retorno": "Enquanto não seca, o risco continua e pode causar um acidente.",
+              "id": "D"
+            }
+          ]
+        }
+      ],
+      "explicacao_final": "A NR-26 trata da sinalização e identificação de segurança: cores e sinais indicam e advertem sobre os riscos do local, como a placa de piso molhado."
+    },
+    {
+      "id": 4,
+      "objeto_no_cenario": "extintor + caixas (+ placa_extintor)",
+      "nome_na_ficha": "Extintor bloqueado",
+      "nr": "NR-23",
+      "dicas": [
+        {
+          "nivel": 1,
+          "texto": "Olhem para a parede do meio do cenário, abaixo da placa amarela."
+        },
+        {
+          "nivel": 2,
+          "texto": "Um equipamento vermelho de emergência não pode ser alcançado rápido: algo está na frente dele."
+        },
+        {
+          "nivel": 3,
+          "texto": "Pensem na norma de proteção contra incêndios."
+        }
+      ],
+      "perguntas": [
+        {
+          "etapa": "risco",
+          "enunciado": "Qual é o risco neste ponto?",
+          "alternativas": [
+            {
+              "texto": "Choque elétrico pelo extintor",
+              "correta": false,
+              "retorno": "O extintor está intacto. O problema é conseguir chegar até ele.",
+              "id": "A"
+            },
+            {
+              "texto": "Queda das caixas sobre alguém",
+              "correta": false,
+              "retorno": "As caixas não parecem instáveis. Reparem no que elas escondem.",
+              "id": "B"
+            },
+            {
+              "texto": "Vazamento do gás do extintor",
+              "correta": false,
+              "retorno": "Não há sinal de vazamento no extintor.",
+              "id": "C"
+            },
+            {
+              "texto": "Acesso bloqueado ao extintor: demora para combater um princípio de incêndio",
+              "correta": true,
+              "retorno": "Isso mesmo.",
+              "id": "D"
+            }
+          ]
+        },
+        {
+          "etapa": "nr",
+          "enunciado": "Qual norma regulamentadora trata desse risco?",
+          "alternativas": [
+            {
+              "texto": "NR-26 · Sinalização de segurança",
+              "correta": false,
+              "retorno": "Não é essa. A NR-26 trata de sinalização e identificação de segurança dos locais de trabalho, com cores e sinais de advertência.",
+              "id": "A"
+            },
+            {
+              "texto": "NR-23 · Proteção contra incêndios",
+              "correta": true,
+              "retorno": "Isso mesmo. A NR-23 trata da proteção contra incêndios. O equipamento de combate ao fogo deve estar livre, sinalizado e de fácil acesso; os detalhes seguem a legislação estadual e as normas técnicas.",
+              "id": "B"
+            },
+            {
+              "texto": "NR-10 · Segurança em instalações e serviços em eletricidade",
+              "correta": false,
+              "retorno": "Não é essa. A NR-10 trata de segurança em instalações e serviços com eletricidade.",
+              "id": "C"
+            },
+            {
+              "texto": "NR-12 · Segurança no trabalho em máquinas e equipamentos",
+              "correta": false,
+              "retorno": "Não é essa. A NR-12 trata de segurança no trabalho com máquinas e equipamentos.",
+              "id": "D"
+            }
+          ]
+        },
+        {
+          "etapa": "medida",
+          "enunciado": "Qual medida preventiva resolve o problema?",
+          "alternativas": [
+            {
+              "texto": "Colocar mais uma placa de aviso sobre as caixas",
+              "correta": false,
+              "retorno": "Placa não libera o acesso: as caixas precisam sair da frente.",
+              "id": "A"
+            },
+            {
+              "texto": "Guardar o extintor em um armário trancado",
+              "correta": false,
+              "retorno": "Trancado, ninguém alcança o extintor a tempo numa emergência.",
+              "id": "B"
+            },
+            {
+              "texto": "Retirar as caixas, manter o espaço livre e sinalizar o local do extintor",
+              "correta": true,
+              "retorno": "Isso mesmo.",
+              "id": "C"
+            },
+            {
+              "texto": "Mover as caixas só quando houver incêndio",
+              "correta": false,
+              "retorno": "Na emergência não há tempo: o acesso deve estar sempre livre.",
+              "id": "D"
+            }
+          ]
+        }
+      ],
+      "explicacao_final": "A NR-23 trata da proteção contra incêndios. O equipamento de combate ao fogo deve estar livre, sinalizado e de fácil acesso; os detalhes seguem a legislação estadual e as normas técnicas."
+    },
+    {
+      "id": 5,
+      "objeto_no_cenario": "escada_funcionario",
+      "nome_na_ficha": "Escada mal apoiada",
+      "nr": "NR-35",
+      "dicas": [
+        {
+          "nivel": 1,
+          "texto": "Olhem para o alto, no canto direito do cenário."
+        },
+        {
+          "nivel": 2,
+          "texto": "Alguém trabalha em um ponto alto e o apoio dele não parece firme."
+        },
+        {
+          "nivel": 3,
+          "texto": "Pensem na norma de trabalho em altura."
+        }
+      ],
+      "perguntas": [
+        {
+          "etapa": "risco",
+          "enunciado": "Qual é o risco neste ponto?",
+          "alternativas": [
+            {
+              "texto": "Choque elétrico por usar a ferramenta",
+              "correta": false,
+              "retorno": "A ferramenta pode ser um risco, mas o que mais ameaça aqui é a queda da escada.",
+              "id": "A"
+            },
+            {
+              "texto": "Queda de altura: escada mal apoiada e trabalhador sem proteção contra queda",
+              "correta": true,
+              "retorno": "Isso mesmo.",
+              "id": "B"
+            },
+            {
+              "texto": "Queda de ferramentas sobre quem passa",
+              "correta": false,
+              "retorno": "Isso também pode ocorrer, mas o risco principal é o próprio trabalhador cair.",
+              "id": "C"
+            },
+            {
+              "texto": "Esforço repetitivo nos braços",
+              "correta": false,
+              "retorno": "Não é o caso: o risco aqui é imediato (queda), não de esforço ao longo do tempo.",
+              "id": "D"
+            }
+          ]
+        },
+        {
+          "etapa": "nr",
+          "enunciado": "Qual norma regulamentadora trata desse risco?",
+          "alternativas": [
+            {
+              "texto": "NR-35 · Trabalho em altura",
+              "correta": true,
+              "retorno": "Isso mesmo. A NR-35 trata do trabalho em altura: atividades acima de 2 m com risco de queda exigem análise de risco, trabalhador capacitado e medidas contra queda.",
+              "id": "A"
+            },
+            {
+              "texto": "NR-06 · Equipamento de Proteção Individual (EPI)",
+              "correta": false,
+              "retorno": "Não é essa. A NR-06 trata de fornecimento, uso e conservação dos equipamentos de proteção individual (EPI).",
+              "id": "B"
+            },
+            {
+              "texto": "NR-12 · Segurança no trabalho em máquinas e equipamentos",
+              "correta": false,
+              "retorno": "Não é essa. A NR-12 trata de segurança no trabalho com máquinas e equipamentos.",
+              "id": "C"
+            },
+            {
+              "texto": "NR-26 · Sinalização de segurança",
+              "correta": false,
+              "retorno": "Não é essa. A NR-26 trata de sinalização e identificação de segurança dos locais de trabalho, com cores e sinais de advertência.",
+              "id": "D"
+            }
+          ]
+        },
+        {
+          "etapa": "medida",
+          "enunciado": "Qual medida preventiva resolve o problema?",
+          "alternativas": [
+            {
+              "texto": "Pedir que um colega só observe de longe",
+              "correta": false,
+              "retorno": "Observar de longe não impede a queda.",
+              "id": "A"
+            },
+            {
+              "texto": "Inclinar mais a escada para ficar mais perto do trabalho",
+              "correta": false,
+              "retorno": "Ângulo errado aumenta o risco de a escada escorregar.",
+              "id": "B"
+            },
+            {
+              "texto": "Trabalhar rápido para ficar pouco tempo no alto",
+              "correta": false,
+              "retorno": "Pressa aumenta o risco. O que protege é prevenir a queda.",
+              "id": "C"
+            },
+            {
+              "texto": "Analisar o risco antes, firmar bem a escada e usar proteção contra queda, ou trocar por uma plataforma segura",
+              "correta": true,
+              "retorno": "Isso mesmo.",
+              "id": "D"
+            }
+          ]
+        }
+      ],
+      "explicacao_final": "A NR-35 trata do trabalho em altura: atividades acima de 2 m com risco de queda exigem análise de risco, trabalhador capacitado e medidas contra queda."
+    },
+    {
+      "id": 6,
+      "objeto_no_cenario": "porta_emergencia",
+      "nome_na_ficha": "Porta de emergência aberta",
+      "nr": "NR-23",
+      "dicas": [
+        {
+          "nivel": 1,
+          "texto": "Olhem para a porta de emergência, no meio do cenário."
+        },
+        {
+          "nivel": 2,
+          "texto": "Uma porta que protege a rota de fuga e segura o fogo e a fumaça está na posição errada."
+        },
+        {
+          "nivel": 3,
+          "texto": "Pensem na norma de proteção contra incêndios."
+        }
+      ],
+      "perguntas": [
+        {
+          "etapa": "risco",
+          "enunciado": "Qual é o risco neste ponto?",
+          "alternativas": [
+            {
+              "texto": "Choque elétrico pelo painel ao lado",
+              "correta": false,
+              "retorno": "O interruptor da parede está normal. Reparem na porta.",
+              "id": "A"
+            },
+            {
+              "texto": "Falta de iluminação na saída",
+              "correta": false,
+              "retorno": "A luz da saída está acesa. O problema é a posição da porta.",
+              "id": "B"
+            },
+            {
+              "texto": "Porta de emergência ou corta-fogo aberta: fogo e fumaça se espalham e a fuga fica insegura",
+              "correta": true,
+              "retorno": "Isso mesmo.",
+              "id": "C"
+            },
+            {
+              "texto": "Ruído excessivo vindo do corredor",
+              "correta": false,
+              "retorno": "Não há sinal de ruído. Reparem no estado da porta.",
+              "id": "D"
+            }
+          ]
+        },
+        {
+          "etapa": "nr",
+          "enunciado": "Qual norma regulamentadora trata desse risco?",
+          "alternativas": [
+            {
+              "texto": "NR-26 · Sinalização de segurança",
+              "correta": false,
+              "retorno": "Não é essa. A NR-26 trata de sinalização e identificação de segurança dos locais de trabalho, com cores e sinais de advertência.",
+              "id": "A"
+            },
+            {
+              "texto": "NR-06 · Equipamento de Proteção Individual (EPI)",
+              "correta": false,
+              "retorno": "Não é essa. A NR-06 trata de fornecimento, uso e conservação dos equipamentos de proteção individual (EPI).",
+              "id": "B"
+            },
+            {
+              "texto": "NR-12 · Segurança no trabalho em máquinas e equipamentos",
+              "correta": false,
+              "retorno": "Não é essa. A NR-12 trata de segurança no trabalho com máquinas e equipamentos.",
+              "id": "C"
+            },
+            {
+              "texto": "NR-23 · Proteção contra incêndios",
+              "correta": true,
+              "retorno": "Isso mesmo. A NR-23 exige saídas de emergência sinalizadas, desobstruídas e nunca fechadas à chave ou presas. Manter a porta corta-fogo fechada segue as normas técnicas e a legislação estadual (Corpo de Bombeiros).",
+              "id": "D"
+            }
+          ]
+        },
+        {
+          "etapa": "medida",
+          "enunciado": "Qual medida preventiva resolve o problema?",
+          "alternativas": [
+            {
+              "texto": "Manter a porta fechada, de preferência com fecho automático, e a saída livre e sinalizada",
+              "correta": true,
+              "retorno": "Isso mesmo.",
+              "id": "A"
+            },
+            {
+              "texto": "Calçar a porta aberta para o ar circular melhor",
+              "correta": false,
+              "retorno": "Porta aberta deixa passar fogo e fumaça: calçar é proibido.",
+              "id": "B"
+            },
+            {
+              "texto": "Trancar a porta com chave para ninguém sair por ela",
+              "correta": false,
+              "retorno": "Saída de emergência não pode ficar trancada: deve abrir fácil por dentro.",
+              "id": "C"
+            },
+            {
+              "texto": "Cobrir a porta com uma cortina para disfarçar",
+              "correta": false,
+              "retorno": "Cobrir a porta atrapalha a identificação da saída.",
+              "id": "D"
+            }
+          ]
+        }
+      ],
+      "explicacao_final": "A NR-23 exige saídas de emergência sinalizadas, desobstruídas e nunca fechadas à chave ou presas. Manter a porta corta-fogo fechada segue as normas técnicas e a legislação estadual (Corpo de Bombeiros)."
+    },
+    {
+      "id": 7,
+      "objeto_no_cenario": "tomada_sobrecarregada",
+      "nome_na_ficha": "Tomada sobrecarregada",
+      "nr": "NR-10",
+      "dicas": [
+        {
+          "nivel": 1,
+          "texto": "Olhem para o canto direito, perto do chão."
+        },
+        {
+          "nivel": 2,
+          "texto": "Muitos fios saem de um único ponto de energia."
+        },
+        {
+          "nivel": 3,
+          "texto": "Pensem na norma de segurança em instalações e serviços com eletricidade."
+        }
+      ],
+      "perguntas": [
+        {
+          "etapa": "risco",
+          "enunciado": "Qual é o risco neste ponto?",
+          "alternativas": [
+            {
+              "texto": "Sobrecarga elétrica: aquecimento, curto-circuito, choque e incêndio",
+              "correta": true,
+              "retorno": "Isso mesmo.",
+              "id": "A"
+            },
+            {
+              "texto": "Apenas tropeço nos cabos, sem risco elétrico",
+              "correta": false,
+              "retorno": "Os cabos podem causar tropeço, mas o maior perigo é o calor, o curto-circuito e o incêndio.",
+              "id": "B"
+            },
+            {
+              "texto": "Queda de objetos sobre quem passa",
+              "correta": false,
+              "retorno": "Não há nada caindo. O perigo está nos cabos e na tomada.",
+              "id": "C"
+            },
+            {
+              "texto": "Exposição a poeira",
+              "correta": false,
+              "retorno": "O problema aqui é elétrico, não de poeira.",
+              "id": "D"
+            }
+          ]
+        },
+        {
+          "etapa": "nr",
+          "enunciado": "Qual norma regulamentadora trata desse risco?",
+          "alternativas": [
+            {
+              "texto": "NR-12 · Segurança no trabalho em máquinas e equipamentos",
+              "correta": false,
+              "retorno": "Não é essa. A NR-12 trata de segurança no trabalho com máquinas e equipamentos.",
+              "id": "A"
+            },
+            {
+              "texto": "NR-10 · Segurança em instalações e serviços em eletricidade",
+              "correta": true,
+              "retorno": "Isso mesmo. A NR-10 trata da segurança em instalações e serviços com eletricidade. Ligar equipamentos demais no mesmo ponto sobrecarrega o circuito e pode causar incêndio.",
+              "id": "B"
+            },
+            {
+              "texto": "NR-23 · Proteção contra incêndios",
+              "correta": false,
+              "retorno": "Não é essa. A NR-23 trata de proteção contra incêndios, incluindo saídas de emergência e combate ao fogo.",
+              "id": "C"
+            },
+            {
+              "texto": "NR-26 · Sinalização de segurança",
+              "correta": false,
+              "retorno": "Não é essa. A NR-26 trata de sinalização e identificação de segurança dos locais de trabalho, com cores e sinais de advertência.",
+              "id": "D"
+            }
+          ]
+        },
+        {
+          "etapa": "medida",
+          "enunciado": "Qual medida preventiva resolve o problema?",
+          "alternativas": [
+            {
+              "texto": "Trocar o fio por um mais fino, para caber mais plugues",
+              "correta": false,
+              "retorno": "Fio mais fino esquenta mais e aumenta o risco de incêndio.",
+              "id": "A"
+            },
+            {
+              "texto": "Trocar o disjuntor por um maior para não desarmar",
+              "correta": false,
+              "retorno": "Disjuntor maior tira a proteção do circuito e piora o risco.",
+              "id": "B"
+            },
+            {
+              "texto": "Desligar o excesso, ligar cada equipamento em tomada própria e chamar profissional habilitado para ampliar os pontos",
+              "correta": true,
+              "retorno": "Isso mesmo.",
+              "id": "C"
+            },
+            {
+              "texto": "Cobrir os cabos com fita para ficarem organizados",
+              "correta": false,
+              "retorno": "Fita não reduz a carga: o excesso continua.",
+              "id": "D"
+            }
+          ]
+        }
+      ],
+      "explicacao_final": "A NR-10 trata da segurança em instalações e serviços com eletricidade. Ligar equipamentos demais no mesmo ponto sobrecarrega o circuito e pode causar incêndio."
+    }
+  ]
+}
